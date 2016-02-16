@@ -16,6 +16,7 @@ ul.inline li {
 body {
   background-color: #263C81;
   color: #F2F2F2;
+  font-size: 16px;
   font-family: "helvetica neue", arial, sans-serif;
 }
 
@@ -127,13 +128,32 @@ a:hover {
 
 
 /* forms */
+.login-form,
+.register-form {
+  width: 50%;
+  max-width: 600px;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
+  font-size: 16px;
   width: 100%;
+  padding: .6em .8em;
+  border-radius: .5em;
+  box-sizing: border-box;
+}
+button {
+  font-size: 16px;
+  padding: .6em .8em;
+  border-radius: .5em;
+  min-width: 40%;
+  float: right;
 }
 .form-row {
   display: table;
+  width: 100%;
+  padding: .5em 0;
 }
 .form-row .half {
   box-sizing: border-box;

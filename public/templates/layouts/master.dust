@@ -16,9 +16,9 @@
                 <li><a href="/admin">Admin</a></li>
                 <li>
                     {?user}
-                         <a href="/logout">Logout</a>
+                         <a href="/logout">Log out</a>
                     {:else}
-                         <a href="/login">Login</a>
+                         <a href="/login">Log in</a>
                     {/user}
                 </li>
             </ul>
