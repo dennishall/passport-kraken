@@ -2,8 +2,8 @@
 
 {<body}
     <form class="login-form" method="post">
-        <h1>Login</h1>
-        <p>Don't have an account? <a href="/register">Sign up</a>.</p>
+        <h1>Log In</h1>
+        <p>Don't have an account? &nbsp; <a href="/register">Sign up</a></p>
         {?messages}
             <ul>
                 {#messages}
@@ -11,22 +11,15 @@
                 {/messages}
             </ul>
         {/messages}
-        <table>
-            <tr>
-                <td><label for="email">Email: </label></td>
-                <td><input id="email" name="email" type="text"/></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password: </label></td>
-                <td><input id="password" name="password" type="password"/></td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" value="Login"/>
-                    <input type="hidden" name="_csrf" value="{_csrf}"/>
-                </td>
-                <td></td>
-            </tr>
-        </table>
+        <div class="form-row">
+            <input placeholder="Email address" name="email" type="email" value="{user.email}" required />
+        </div>
+        <div class="form-row">
+            <input placeholder="Password" name="password" type="password" required />
+        </div>
+        <div class="form-row">
+            <input type="hidden" name="_csrf" value="{_csrf}"/>
+            <button>Log in</button>
+        </div>
     </form>
 {/body}

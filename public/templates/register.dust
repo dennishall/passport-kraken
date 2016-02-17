@@ -3,7 +3,7 @@
 {<body}
     <form class="register-form" method="post">
         <h1>Sign Up</h1>
-        <p>Already have an account? <a href="/login">Log in</a>.</p>
+        <p>Already have an account? &nbsp; <a href="/login">Log in</a></p>
         {?messages}
             <ul>
                 {#messages}

@@ -52,7 +52,7 @@ module.exports = function (router) {
                         if(err){
                             res.end(err);
                         } else {
-                            res.render('register-success', {user: user});
+                            res.render('register-success', {user: newUserCandidate});
                         }
                     });
                 }
