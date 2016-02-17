@@ -18,7 +18,7 @@ module.exports = function (router) {
 
     /**
      * Receive the registration credentials.
-     * Successful authentications will go to /profile or if the user was trying to access a secured resource, the URL
+     * Successful registration will go to /profile or if the user was trying to access a secured resource, the URL
      * that was originally requested.
      *
      * Failed authentications will go back to the login page with a helpful error message to be displayed.
@@ -46,6 +46,8 @@ module.exports = function (router) {
                             if(err){
                                 res.end(err);
                             } else {
+                                // this doesn't work, the user is not logged in.
+                                // res.redirect('/profile');
                                 res.render('register-success', {user: newUserCandidate});
                             }
                         });
